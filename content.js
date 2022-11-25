@@ -14,25 +14,25 @@ async function loop() {
 
 function createLink() {
     if (document.getElementById("addtnl-jira") != null)
-        return
+        return;
     let url;
     console.log("[VIA/VM Linker] UP");
     const paragraph = document.getElementById("summary-val");
 
     if (paragraph === null)
-        return
+        return;
     const parText = paragraph.textContent;
     console.log("[VIA/VM Linker] Text to matche: " + parText);
     const regex = /^(VM-\d+)|(VIA-\d+)/g;
     const found = parText.match(regex);
 
     if (found === null)
-        return
+        return;
 
     console.log("[VIA/VM Linker] Text matched: " + found);
     if (found[0].includes("VM"))
              url = "https://jira.tinqin.com/browse/" + found;
-     else
+    else
              url = "https://jira.viamedis.fr/browse/" + found;
 
     console.log("[VIA/VM Linker] Adding link: " + url);
@@ -50,6 +50,8 @@ function createLink() {
     delimBold.innerHTML = ' &harr; '
 
     const keyVal = document.getElementById("key-val");
+    if (keyVal === null)
+        return;
     keyVal.parentNode.appendChild(delimBold);
     keyVal.parentNode.appendChild(linkBlock);
 
