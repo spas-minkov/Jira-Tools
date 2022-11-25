@@ -1,9 +1,19 @@
 createLink();
+removeSidebar();
 loop();
+
+function removeSidebar(){
+    const divToRemove = document.querySelector("#dashboard > div");
+    if(divToRemove === null)
+        return
+    divToRemove.remove();
+    console.log("DIV removed")
+}
 
 function sleep() {
     return new Promise(resolve => setTimeout(resolve, 1000));
 }
+
 
 async function loop() {
     while (true) {
