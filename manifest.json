@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "TiViJiEx",
+    "version": "0.2",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://jira.tinqin.com/*",
+                "https://jira.viamedis.fr/*"
+            ],
+            "js": ["content.js"],
+            "match_origin_as_fallback": true
+        }
+    ],
+    "background":{
+        "service_worker": "background.js"
+    },
+    "action":{
+        "default_icon": "Ext3.png"
+    }
+}
