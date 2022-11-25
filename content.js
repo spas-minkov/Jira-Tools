@@ -18,7 +18,6 @@ function createLink() {
     let url;
     console.log("[VIA/VM Linker] UP");
     const paragraph = document.getElementById("summary-val");
-    const el = document.getElementsByClassName("class");
 
     if (paragraph === null)
         return
