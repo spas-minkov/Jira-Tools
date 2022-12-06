@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "TiViJiEx",
-    "version": "0.2",
+    "name": "Jira-Tools",
+    "version": "0.1",
     "content_scripts": [
         {
             "matches": [
@@ -11,11 +11,5 @@
             "js": ["content.js"],
             "match_origin_as_fallback": true
         }
-    ],
-    "background":{
-        "service_worker": "background.js"
-    },
-    "action":{
-        "default_icon": "Ext3.png"
-    }
+    ]
 }
